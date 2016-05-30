@@ -30,9 +30,16 @@
 
 
     // check to see if paragraph one exists
-    var paragraphElementLength = paragraphElements.length-1;
+    var paragraphElementLength = paragraphElements.length;
     for(var index = paragraphElementLength; index >= 0; index--){
-        console.log(index);
+        // debugging technique #1
+        console.log("This is log");
+        console.debug("This is debug");
+        console.error("This is an error!");
+        console.info("This is info");
+        console.warn("This is a warning!");
+        // to test a loop
+        console.assert(index < 3, "index out of bounds");
         if(paragraphElements[index]){
         paragraphElements[index].innerHTML = paragraphs[index];
         // innerHTML - turns text compatible to HTML
