@@ -19,21 +19,24 @@
     // define your paragraphs array (best way and most common)
     var paragraphs = [];
     
-    // data for my pages
-    paragraphs[0] = "This is my first paragraph. It is only visible on the first page"
-    paragraphs[1] = "This is my second paragraph. It is only visible on the second page"
-    paragraphs[2] = "This is my third paragraph. It is only visible on the third page"
-    
     // second way to define an array
     // var paragraphs = new Array();
+    
+    // data for my pages
+    paragraphs[0] = "<span class='firstSentence'> This is my first paragraph.</span>It is only visible on the first page"
+    paragraphs[1] = "<span class='firstSentence'> This is my second paragraph.</span>It is only visible on the second page"
+    paragraphs[2] = "<span class='firstSentence'> This is my third paragraph.</span> It is only visible on the third page"
+    
+
 
     // check to see if paragraph one exists
-    
-    for(var index = 0; index < paragraphElements.length; index++){
+    var paragraphElementLength = paragraphElements.length-1;
+    for(var index = paragraphElementLength; index >= 0; index--){
+        console.log(index);
         if(paragraphElements[index]){
-        paragraphElements[index].textContent = paragraphs[index];
+        paragraphElements[index].innerHTML = paragraphs[index];
+        // innerHTML - turns text compatible to HTML
         }
-        
     }
    // }
    // if (paragraphElement[0]) {
