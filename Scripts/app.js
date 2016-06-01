@@ -31,10 +31,11 @@
     // create a reference for sendButton
     var sendButton = document.getElementById("sendButton");
     
-    // check to see if send button exists
-    if(sendButton)
-    // for assignment 2! - event listener
-    sendButton.addEventListener("click", sendButtonClick);
+    // check to see if sendButton exists
+    if(sendButton) {
+        // event listener
+        sendButton.addEventListener("click", sendButtonClick);
+    }
     
     // event handler fucntion
     function sendButtonClick(event){
@@ -91,6 +92,8 @@
 
     // check to see if paragraph one exists
     var paragraphElementLength = paragraphElements.length;
+    
+    // if paragraph exists then populate each paragraph on the page
     for(var index = paragraphElementLength; index >= 0; index--){
         // debugging technique #1
         //console.log("This is log");
@@ -107,16 +110,16 @@
     }
    // }
    // }
-    if (paragraphElement[0]) {
-        paragraphElement[0].textContent = paragraphs[0];
-    }
+   // if (paragraphElement[0]) {
+   //     paragraphElement[0].textContent = paragraphs[0];
+   // }
     // check to see if paragraph two exists
-    if (paragraphElement[1]) {
-        paragraphElement[1].textContent = paragraphs[1];
-    }
+   // if (paragraphElement[1]) {
+   //     paragraphElement[1].textContent = paragraphs[1];
+   // }
     // check to see if paragraph three exists
-    if (paragraphElement[2]) {
-        paragraphElement[2].textContent = paragraphs[2];
-    }
+   // if (paragraphElement[2]) {
+   //     paragraphElement[2].textContent = paragraphs[2];
+   // }
 
 })();
