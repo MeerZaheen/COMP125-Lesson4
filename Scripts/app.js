@@ -1,4 +1,13 @@
-/* main JavaScript file */
+/*
+* FileName: app.js
+*
+* @author Meer
+* @date june 1, 2016
+*
+* StudentID: 300522487
+* website: azure link
+* @description: This file is the main javascript file for the website
+*/
 // IIFE - Immediately Invoked Function Expression
 (function () {
     "use strict";
@@ -22,6 +31,8 @@
     // create a reference for sendButton
     var sendButton = document.getElementById("sendButton");
     
+    // check to see if send button exists
+    if(sendButton)
     // for assignment 2! - event listener
     sendButton.addEventListener("click", sendButtonClick);
     
@@ -40,13 +51,23 @@
     // create a reference to the form
     var contactForm = document.getElementById("contactForm");
     
-    // event listener with inline anonymous event handler function
+    if (contactForm){
+            // event listener with inline anonymous event handler function
     contactForm.addEventListener("submit", function(event){
         event.preventDefault();
         console.log("submitted");
         showFormInput();
         contactForm.reset();
-    });
+    });     
+    }
+    
+    /**
+     * This function shows the input from each form fild
+     * on the console
+     * 
+     * @method showFormInput
+     * @return {void}
+     */
     
     // event handler function
     function showFormInput(){
@@ -86,16 +107,16 @@
     }
    // }
    // }
-   // if (paragraphElement[0]) {
-   //     paragraphElement[0].textContent = paragraphs[0];
-   // }
+    if (paragraphElement[0]) {
+        paragraphElement[0].textContent = paragraphs[0];
+    }
     // check to see if paragraph two exists
-   // if (paragraphElement[1]) {
-   //     paragraphElement[1].textContent = paragraphs[1];
-   // }
+    if (paragraphElement[1]) {
+        paragraphElement[1].textContent = paragraphs[1];
+    }
     // check to see if paragraph three exists
-   // if (paragraphElement[2]) {
-   //     paragraphElement[2].textContent = paragraphs[2];
-   // }
+    if (paragraphElement[2]) {
+        paragraphElement[2].textContent = paragraphs[2];
+    }
 
 })();
