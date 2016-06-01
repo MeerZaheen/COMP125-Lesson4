@@ -19,6 +19,45 @@
     // define your paragraphs array (best way and most common)
     var paragraphs = [];
     
+    // create a reference for sendButton
+    var sendButton = document.getElementById("sendButton");
+    
+    // for assignment 2! - event listener
+    sendButton.addEventListener("click", sendButtonClick);
+    
+    // event handler fucntion
+    function sendButtonClick(event){
+        console.log("clicked!");
+    }
+        
+    // create a reference to the form field
+    var firstName = document.getElementById("firstName");
+    var lastName = document.getElementById("lastName");
+    var email = document.getElementById("email");
+    var contactNumber = document.getElementById("contactNumber");
+    var message = document.getElementById("message");
+
+    // create a reference to the form
+    var contactForm = document.getElementById("contactForm");
+    
+    // event listener with inline anonymous event handler function
+    contactForm.addEventListener("submit", function(event){
+        event.preventDefault();
+        console.log("submitted");
+        showFormInput();
+        contactForm.reset();
+    });
+    
+    // event handler function
+    function showFormInput(){
+        console.log("First Name:" + firstName.value);
+        console.log("Last Name:" + lastName.value);
+        console.log("Email:" + email.value);
+        console.log("contactNumber:" + contactNumber.value);
+        console.log("message:" + message.value);
+    }
+    
+    
     // second way to define an array
     // var paragraphs = new Array();
     
@@ -33,18 +72,19 @@
     var paragraphElementLength = paragraphElements.length;
     for(var index = paragraphElementLength; index >= 0; index--){
         // debugging technique #1
-        console.log("This is log");
-        console.debug("This is debug");
-        console.error("This is an error!");
-        console.info("This is info");
-        console.warn("This is a warning!");
+        //console.log("This is log");
+        //console.debug("This is debug");
+        //console.error("This is an error!");
+        //console.info("This is info");
+        //console.warn("This is a warning!");
         // to test a loop
-        console.assert(index < 3, "index out of bounds");
+        //console.assert(index < 3, "index out of bounds");
         if(paragraphElements[index]){
         paragraphElements[index].innerHTML = paragraphs[index];
         // innerHTML - turns text compatible to HTML
         }
     }
+   // }
    // }
    // if (paragraphElement[0]) {
    //     paragraphElement[0].textContent = paragraphs[0];
