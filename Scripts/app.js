@@ -50,11 +50,11 @@
     
     // event handler function
     function showFormInput(){
-        console.log("First Name:" + firstName.value);
-        console.log("Last Name:" + lastName.value);
-        console.log("Email:" + email.value);
-        console.log("contactNumber:" + contactNumber.value);
-        console.log("message:" + message.value);
+        console.log("First Name: " + firstName.value);
+        console.log("Last Name: " + lastName.value);
+        console.log("Email: " + email.value);
+        console.log("contactNumber: " + contactNumber.value);
+        console.log("message: " + message.value);
     }
     
     
